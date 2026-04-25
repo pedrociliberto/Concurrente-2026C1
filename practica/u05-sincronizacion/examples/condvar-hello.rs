@@ -38,6 +38,7 @@ fn main() {
     let (lock, cvar) = &*pair;
 
     // El hilo principal se bloquea en la Condvar, esperando a que el resultado del cálculo costoso esté listo. La función wait_while se utiliza para bloquear al hilo hasta que la condición especificada (en este caso, que el valor booleano sea false) se cumpla. Si el hilo despierta debido a un spurious wakeup, volverá a verificar la condición y seguirá bloqueado si el resultado aún no está listo.
+    // 'pending' es el resultado del lockeo del mutex. Si 'pending' es true, el hilo seguirá bloqueado. Si 'pending' es false, el hilo podrá continuar con su ejecución.
     let _guard = cvar.wait_while(lock.lock().unwrap(), |pending| {
         println!("[waiter] checking condition {}", *pending);
         *pending
