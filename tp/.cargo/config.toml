@@ -1,0 +1,3 @@
+[env]
+# Usado para correr los tests de integración en un único hilo, ya que sino se producen conflictos con el proc. de pagos.
+RUST_TEST_THREADS = "1"
