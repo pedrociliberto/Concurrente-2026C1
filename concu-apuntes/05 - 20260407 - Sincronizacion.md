@@ -236,7 +236,7 @@ Los procesos pueden tomar distintos **estados**:
 - Ejecutando el monitor (solo uno a la vez);
 - Bloqueado en FIFO de variable de condición;
 - Recién liberado de la *wait condition*;
-- Recién completó una opración `signalC`
+- Recién completó una operación `signalC`
 #### Variable de condición
 
 Una variable de condición `C`:
@@ -256,7 +256,7 @@ En el **semáforo**:
 - Un proceso desbloqueado con `signal` puede continuar la ejecución inmediatamente
 
 En el **monitor**:
-- `wait` siempre bloquea
-- `signal` no tiene efecto si la cola está vacía
-- `signal` desbloquea el proceso del tope de la cola (FIFO)
+- `waitC` siempre bloquea
+- `signalC` no tiene efecto si la cola está vacía
+- `signalC` desbloquea el proceso del tope de la cola (FIFO)
 - Un proceso desbloqueado con `signalC` debe esperar que el proceso señalizador deje el monitor.

@@ -28,7 +28,7 @@ M: P -> N U 0
 - En los Places se crean *tokens* (fichas), que pueden crearse/destruirse. 
 - La marca inicial se corresponderá con el **estado inicial del sistema**.
 - Cuando el token está en el lugar  `p1`, entonces `M(p1) = 1` y `M(p2) = 0`.
-- Entonces `M_0 = (1,0)`
+- Entonces $M_0 = (1,0)
 - El número que devuelve la función es la **cantidad de tokens que hay en ese Place**.
 
 #### Funciones de Entrada y Salida
@@ -36,7 +36,7 @@ M: P -> N U 0
 Sea `t ∈ PN = (T, P, A)` una transición, se definen las funciones:
 
 - `I(t) = p / p ∈ P / (p,t) ∈ A` es la **entrada o input** de la transición `t`
-- `I(t) = p / p ∈ P / (t,p) ∈ A` es la **salida o output** de la transición `t`
+- `O(t) = p / p ∈ P / (t,p) ∈ A` es la **salida o output** de la transición `t`
 
 #### Grafo de alcance
 

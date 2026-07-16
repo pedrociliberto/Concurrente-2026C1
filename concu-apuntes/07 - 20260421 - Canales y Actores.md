@@ -42,7 +42,7 @@ Herramienta de **IPC** (Inter Process Communication).
 
 #### Remote Procedure Calls
 
-Permiten al clienter **ejecutar funciones en un servidor localizado en otro procesador**.
+Permiten al cliente **ejecutar funciones en un servidor localizado en otro procesador**.
 
 - Se requiere implementación de *stubs* en ambos extremos.
 - Los *stubs* conforman **interfaces remotas** utilizadas para compilar cliente y servidor. 

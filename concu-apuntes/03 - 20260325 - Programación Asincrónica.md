@@ -48,7 +48,7 @@ Entonces se puede ver de esta manera:
 - `.await`: ejecuta (puede pausar).
 - El código se ejecuta en partes, no dodo junto.
 - `poll`: hace que avance el Future, corre hasta el próximo `.await`. Devuelve `Ready` si terminó, o `Pending` si falta. Guarda el estado para continuar después.
-- Los `.await` solo pueden usarse dentro de funciones *sync*.
+- Los `.await` solo pueden usarse dentro de funciones *async*.
 
 ### Cuándo usar *async*
 
